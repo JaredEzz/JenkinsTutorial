@@ -12,6 +12,7 @@ pipeline {
         jdk 'JDK 8'
     }
     stages {
+
         stage ('Clean') {
             steps {
                 sh 'mvn clean'
@@ -48,14 +49,6 @@ pipeline {
                 archiveArtifacts artifacts: 'target/*.jar'
             }
         }
-
-       stage ('Package') {
-                steps {
-                    sh 'mvn package'
-                    archiveArtifacts artifacts: 'src/**/*.java'
-                    archiveArtifacts artifacts: 'target/*.jar'
-                }
-            }
 
        stage ('Building image') {
                     steps {
