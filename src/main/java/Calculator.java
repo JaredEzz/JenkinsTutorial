@@ -22,7 +22,6 @@ class Calculator {
         return a / b;
     }
 
-break project
     /*
     Returns the n'th number in the fibonacci sequence
     https://en.wikipedia.org/wiki/Fibonacci_number
